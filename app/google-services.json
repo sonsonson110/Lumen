@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "903462466082",
+    "project_id": "lumen-demo-bfdd8",
+    "storage_bucket": "lumen-demo-bfdd8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903462466082:android:8a2f2dc518a5483c29d07b",
+        "android_client_info": {
+          "package_name": "com.example.lumen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ7iaVEvXONTFgoiYJ8zut-BKFSosvH6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
