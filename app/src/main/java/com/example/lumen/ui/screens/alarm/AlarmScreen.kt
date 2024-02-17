@@ -1,9 +1,17 @@
 package com.example.lumen.ui.screens.alarm
 
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import com.example.lumen.ui.navigation.Screen
+import androidx.compose.ui.Modifier
 
 @Composable
-fun AlarmScreen() {
-
+fun AlarmScreen(modifier: Modifier) {
+    Scaffold(modifier = modifier) { innerPadding ->
+        Box(Modifier.padding(innerPadding)) {
+            Text(text = "AlarmScreen")
+        }
+    }
 }

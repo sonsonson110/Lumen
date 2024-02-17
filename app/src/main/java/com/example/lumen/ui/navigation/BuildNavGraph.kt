@@ -9,28 +9,29 @@ import com.example.lumen.ui.screens.challenges.ChallengeScreen
 import com.example.lumen.ui.screens.hobby.HobbyScreen
 import com.example.lumen.ui.screens.home.HomeScreen
 import com.example.lumen.ui.screens.meditate.MeditateScreen
+import androidx.compose.ui.Modifier
 
 @Composable
-fun BuildNavGraph(navController: NavHostController) {
+fun BuildNavGraph(navController: NavHostController, modifier: Modifier) {
     NavHost(navController = navController, startDestination = Screen.HomeScreen.route) {
         composable(
             route = Screen.HomeScreen.route
-        ) { HomeScreen() }
+        ) { HomeScreen(modifier) }
 
         composable(
             route = Screen.AlarmScreen.route
-        ) { AlarmScreen() }
+        ) { AlarmScreen(modifier) }
 
         composable(
             route = Screen.HobbyScreen.route
-        ) { HobbyScreen() }
+        ) { HobbyScreen(modifier) }
 
         composable(
             route = Screen.MeditateScreen.route
-        ) { MeditateScreen() }
+        ) { MeditateScreen(modifier) }
 
         composable(
             route = Screen.ChallengeScreen.route
-        ) { ChallengeScreen() }
+        ) { ChallengeScreen(modifier) }
     }
 }
