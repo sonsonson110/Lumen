@@ -10,7 +10,13 @@ val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
-// custom color
+// --- custom color ---
+
+// primary
 val MediumAquamarine = Color(0xff5bf5ab)
+// background
 val EerieBlack = Color(0xff1f1f1f)
-val AmericanSilver = Color(0xffd1d1d1)
+
+// bottom navigation bar
+val ChineseBlack = Color(0xff111111)
+val PhilippineGray = Color(0xc88c8c8c)

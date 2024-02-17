@@ -8,6 +8,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavDestination.Companion.hierarchy
@@ -15,7 +16,11 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.lumen.R
 import com.example.lumen.ui.navigation.Screen
+import com.example.lumen.ui.theme.ChineseBlack
+import com.example.lumen.ui.theme.PhilippineGray
+import com.example.lumen.ui.theme.MediumAquamarine
 
 val bottomItems = listOf<Screen>(
     Screen.HomeScreen,
@@ -27,7 +32,7 @@ val bottomItems = listOf<Screen>(
 
 @Composable
 fun LumenBottomBar(navController: NavHostController) {
-    BottomAppBar {
+    BottomAppBar(backgroundColor = MediumAquamarine) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentDestination = navBackStackEntry?.destination
 
@@ -49,8 +54,19 @@ fun LumenBottomBar(navController: NavHostController) {
                         restoreState = true
                     }
                 },
-                icon = { Icon(imageVector = Icons.Filled.Face, contentDescription = null) },
+                icon = {
+                    val icon = when (item) {
+                        is Screen.HomeScreen -> R.drawable.rounded_home_24
+                        is Screen.AlarmScreen -> R.drawable.outline_access_alarm_24
+                        is Screen.HobbyScreen -> R.drawable.outline_directions_run_24
+                        is Screen.MeditateScreen -> R.drawable.baseline_self_improvement_24
+                        is Screen.ChallengeScreen -> R.drawable.outline_trophy_24
+                    }
+                    Icon(painter = painterResource(id = icon), contentDescription = null)
+                },
                 label = { Text(item.label, fontSize = 10.sp) },
+                selectedContentColor = ChineseBlack,
+                unselectedContentColor = PhilippineGray
             )
         }
     }
