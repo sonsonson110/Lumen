@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -8,6 +10,9 @@ plugins {
 
     // firebase
     id("com.google.gms.google-services")
+
+    // gradle secret for map api
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -57,6 +62,8 @@ android {
     }
 }
 
+
+
 dependencies {
 
     implementation("androidx.core:core-ktx:1.12.0")
@@ -93,10 +100,11 @@ dependencies {
 
     // firebase bom
     implementation(platform("com.google.firebase:firebase-bom:32.7.2"))
-
     // firebase analytics
     implementation("com.google.firebase:firebase-analytics")
     // cloud firestore
     implementation("com.google.firebase:firebase-firestore")
 
+    // Android Maps Compose composables for the Maps SDK for Android
+    implementation("com.google.maps.android:maps-compose:4.3.0")
 }
