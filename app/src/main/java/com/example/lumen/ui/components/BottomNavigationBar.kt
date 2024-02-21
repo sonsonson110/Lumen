@@ -63,8 +63,13 @@ fun LumenBottomBar(navController: NavHostController) {
                         is Screen.HobbyScreen -> R.drawable.outline_directions_run_24
                         is Screen.MeditateScreen -> R.drawable.baseline_self_improvement_24
                         is Screen.ChallengeScreen -> R.drawable.outline_trophy_24
+                        else -> 0
                     }
-                    Icon(painter = painterResource(id = icon), contentDescription = null, modifier = Modifier.size(32.dp))
+                    Icon(
+                        painter = painterResource(id = icon),
+                        contentDescription = null,
+                        modifier = Modifier.size(32.dp)
+                    )
                 },
                 label = { Text(item.label, fontSize = 10.sp) },
                 selectedContentColor = ChineseBlack,

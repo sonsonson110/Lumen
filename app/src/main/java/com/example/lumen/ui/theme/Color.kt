@@ -20,3 +20,6 @@ val EerieBlack = Color(0xff1f1f1f)
 // bottom navigation bar
 val ChineseBlack = Color(0xff111111)
 val PhilippineGray = Color(0xc88c8c8c)
+
+// home page
+val Dandelion = Color(0xfff7de32)
