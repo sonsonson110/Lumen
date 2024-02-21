@@ -295,7 +295,7 @@ fun QuoteSection(modifier: Modifier = Modifier) {
             contentAlignment = Alignment.CenterStart
         ) {
             Text(
-                text = "Olivia I begin to speak only when I’m certain what I’ll say isn’t better left unsaid",
+                text = "A fit body, a calm mind, a house full of love. These things cannot be bought – they must be earned.",
                 color = Color.White,
                 fontSize = titleTextSize,
                 modifier = Modifier.padding(16.dp),
